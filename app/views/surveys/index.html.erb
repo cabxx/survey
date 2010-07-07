@@ -1,0 +1,32 @@
+<h1>Surveys</h1>
+
+<table class="matrix topMargin">
+<thead>
+<tr>
+<th width="50%">Name</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+
+<% @surveys.each do |survey| %>
+<tr>
+<td><%= link_to h(survey.name), survey %></td>
+<td class="actions">
+<div class="pageLinks">
+<ul>
+<li><%= link_to 'View', survey %></li>
+<li><%= link_to 'Edit', edit_survey_path(survey) %></li>
+<li><%= link_to 'Remove', survey, :confirm => 'Are you sure?', :method => :delete %></li>
+</ul>
+</div>
+</td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+
+<ul class="pageLinks topMargin">
+<li><%= link_to 'Create Survey', new_survey_path %></li>
+</ul>

@@ -1,0 +1,43 @@
+<h1>Choices</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Question</td>
+<td><%= @question.content %> (<%= link_to 'View', @question %>)
+</tr>
+</tbody>
+</table>
+
+<table class="matrix topMargin">
+<thead>
+<tr>
+<th>#</th>
+<th width="50%">Content</th>
+<th>Score</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+
+<% @choices.each_with_index do |choice, i| %>
+<tr>
+<td><%= i + 1 %></td>
+<td><%= link_to choice.content, choice %></td>
+<td><%= choice.score %></td>
+<td class="actions">
+<div class="pageLinks"><ul>
+<li><%= link_to 'View', choice %></li>
+<li><%= link_to 'Edit', edit_choice_path(choice) %></li>
+<li><%= link_to 'Remove', choice, :confirm => 'Are you sure?', :method => :delete %></li>
+</ul></div>
+</td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Create Choice', new_question_choice_path(@question) %></li>
+</div>

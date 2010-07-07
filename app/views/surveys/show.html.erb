@@ -1,0 +1,21 @@
+<h1><%= h @survey.name %></h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Name</td>
+<td><%=h @survey.name %>
+</tr>
+<tr>
+<td>Created</td>
+<td><%= h time_ago_in_words @survey.created_at %> ago</td>
+</tr>
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Take Survey', url_for(:controller => 'surveys', :action => 'submit', :id => @survey.id) %></li>
+<li><%= link_to 'Questions', survey_questions_path(@survey) %></li>
+<li><%= link_to 'Submissions', survey_submissions_path(@survey) %></li>
+<li><%= link_to 'Edit', edit_survey_path(@survey) %></li>
+</ul></div>

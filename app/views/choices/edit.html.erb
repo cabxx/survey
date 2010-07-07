@@ -1,0 +1,23 @@
+<h1>Create Choice</h1>
+
+<% form_for([@question, @choice]) do |f| %>
+<%= f.error_messages %>
+
+<div class="fields topMargin">
+<div class="field">
+<%= f.label :content %>
+<%= f.text_field :content %>
+</div>
+<div class="field">
+<%= f.label :score %>
+<%= f.text_field :score %>
+</div>
+<div class="field">
+<%= f.label :next, 'Skip to Question #' %>
+<%= f.text_field :next %>
+</div>
+<div class="field">
+<%= f.submit 'OK' %>
+</div>
+</div>
+<% end %>

@@ -1,0 +1,14 @@
+<h1><%= h @survey.name %></h1>
+
+<% form_for([@survey, @submission]) do |f| %>
+<%= f.error_messages %>
+<div class="fields topMargin">
+<div class="field">
+<%= f.label :name, 'Your Name' %>
+<%= f.text_field :name %>
+</div>
+<div class="field">
+<%= f.submit 'OK' %>
+</div>
+</div>
+<% end %>

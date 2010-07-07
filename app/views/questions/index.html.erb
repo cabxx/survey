@@ -1,0 +1,41 @@
+<h1>Questions</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Survey</td>
+<td><%= link_to h(@survey.name), @survey %>
+</tr>
+</tbody>
+</table>
+
+<table class="matrix topMargin">
+<thead>
+<tr>
+<th>#</th>
+<th width="50%">Content</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+
+<% @questions.each_with_index do |question, i| %>
+<tr>
+<td><%= i + 1 %></td>
+<td><%= link_to question.content, question %></td>
+<td class="actions">
+<div class="pageLinks"><ul>
+<li><%= link_to 'View', question %></li>
+<li><%= link_to 'Edit', edit_question_path(question) %></li>
+<li><%= link_to 'Remove', question, :confirm => 'Are you sure?', :method => :delete %></li>
+</ul></div>
+</td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Create Question', new_survey_question_path(@survey) %></li>
+</div>

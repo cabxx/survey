@@ -1,0 +1,32 @@
+<h1>Answers</h1>
+
+<table class="matrix topMargin">
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+
+<% @answers.each_with_index do |answer, i| %>
+<tr>
+<td><%= i + 1 %></td>
+<td>
+<table class="subQA">
+<tr>
+<td><%= link_to 'Question', answer.question %>: </td>
+<td><%= answer.question.content %></td>
+</tr>
+<tr>
+<td><%= link_to 'Answer', answer %>: </td>
+<td><%= answer.choice.content %></td>
+</tr>
+</table>
+</td>
+<td><%= h answer.choice.score %></td>
+</tr>
+<% end %>
+</tbody>
+</table>

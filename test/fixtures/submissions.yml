@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  start_time: 2010-07-05 09:32:53
+  end_time: 2010-07-05 09:32:53
+  survey: 
+
+two:
+  name: MyString
+  start_time: 2010-07-05 09:32:53
+  end_time: 2010-07-05 09:32:53
+  survey: 

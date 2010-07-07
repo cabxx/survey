@@ -1,0 +1,22 @@
+<h1>Answer</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Survey</td>
+<td><%= link_to h(@answer.submission.survey.name), @answer.submission.survey %></td>
+</tr>
+<tr>
+<td>Question</td>
+<td><%= @answer.choice.question.content %> (<%= link_to 'View', @answer.choice.question %>)</td>
+</tr>
+<tr>
+<td>Choice</td>
+<td><%= @answer.choice.content %> (<%= link_to 'View', @answer.choice %>)</td>
+</tr>
+<tr>
+<td>Created</td>
+<td><%= h time_ago_in_words @answer.created_at %></td>
+</tr>
+</tbody>
+</table>

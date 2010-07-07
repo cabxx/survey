@@ -1,0 +1,296 @@
+/* reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* scaffold */
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.fieldWithErrors {
+  /* background-color: red; */
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin-left: 20px;
+}
+
+/* app */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 62.5%;
+  background-color: #fff;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  margin: 23px 0;
+  font-size: 1.3em;
+}
+
+p {
+  margin: 23px 0;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.field {
+  margin: 16px 0 0 0;
+}
+
+.field:first-child {
+  margin-top: 0px;
+}
+
+label {
+  font-weight: bold;
+  color: #444;
+  margin: 0 0 4px 0;
+  padding: 0;
+  display: block;
+}
+
+.inlineLabel {
+  display: inline;
+}
+
+input[type=text], input[type=password], select, textarea {
+  font-size: 1.4em;
+  color: #333333;
+  padding: 3px;
+  background-color: #ffffff;
+  border: 1px solid #aaaaaa;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus {
+  background-color: #ffffe3;
+}
+
+.radioGroup {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.radioGroup legend {
+  margin-left: 17px;
+  font-weight: bold;
+}
+
+ul.radio {
+  list-style: none;
+}
+
+ul.radio li {
+  padding: 10px;
+  border: 1px solid transparent;
+}
+
+ul.radio li:hover, ul.radio li.focus {
+  background-color: #ffffe3;
+  border: 1px solid #ccc;
+}
+
+.pageLinks {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.pageLinks li {
+  list-style-type: none;
+  margin-left: .9em;
+  float: left;
+}
+
+.pageLinks li:first-child {
+  padding-left: 0;
+  margin-left: 0;
+  border-left: none;
+}
+
+.pageLinks a {
+  font-size: .7em;
+  font-weight: bold;
+  color: #444;
+  background: #fff;
+  text-decoration: none;
+  padding: 4px;
+  border: 1px solid #444;
+  min-width: 40px;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.pageLinks a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.matrix {
+  width: 600px;
+  border-collapse: collapse;
+}
+
+.matrix th {
+  background: #eee;
+  color: #000;
+  font-size: .8em;
+  font-weight: bold;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+  table-layout: fixed;
+}
+
+.matrix td {
+  vertical-align: middle;
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.matrix td.actions {
+  text-align: center;
+}
+
+.dataList {
+  width: 600px;
+}
+
+.dataList td:first-child {
+  width: 33%;
+  font-weight: bold;
+}
+
+.topMargin {
+  margin-top: 23px;
+}
+
+div.notice {
+  margin-bottom: 23px;
+}
+
+.subQA td {
+  border: 0;
+  padding: 0 0 0 6px;
+}
+
+.subQA td:first-child {
+  padding-left: 0;
+}
+
+#header {
+  background: #eee;
+  padding: 8px;
+}
+
+#header a {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+#page {
+  font-size: 1.4em;
+}
+
+#main {
+  margin: 23px 8px 0px 8px;
+  padding-bottom: 23px;
+}

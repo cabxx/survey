@@ -1,0 +1,23 @@
+<h1>Question</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Content</td>
+<td><%= @question.content %>
+</tr>
+<tr>
+<td>Survey</td>
+<td><%= link_to h(@question.survey.name), @question.survey %></td>
+</tr>
+<tr>
+<td>Created</td>
+<td><%= h time_ago_in_words @question.created_at %> ago</td>
+</tr>
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Choices', question_choices_path(@question) %></li>
+<li><%= link_to 'Edit', edit_question_path(@question) %></li>
+</ul></div>

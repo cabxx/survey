@@ -1,0 +1,15 @@
+<h1>Edit Question</h1>
+
+<% form_for(@question) do |f| %>
+<%= f.error_messages %>
+
+<div class="fields topMargin">
+<div class="field">
+<%= f.label :content %>
+<%= f.text_area :content, :rows => 10 %>
+</div>
+<div class="field">
+<%= f.submit 'OK' %>
+</div>
+</div>
+<% end %>

@@ -1,0 +1,22 @@
+<h1>Question <%= @submission.answers.count + 1 %></h1>
+
+<div class="questionText topMargin"><%= @question.content %></div>
+
+<% form_for([@submission, @answer]) do |f| %>
+<%= f.error_messages %>
+<div class="fields topMargin">
+<div class="field">
+<fieldset class="radioGroup">
+<legend>Select Answer</legend>
+<ul class="radio">
+<% @question.choices.each do |c| %>
+<li><%= f.radio_button :choice_id, c.id, :onclick => 'this.form.submit()' %> <%= f.label :choice_id, c.content, :value => c.id, :class => 'inlineLabel' %></li>
+<% end %>
+</ul>
+</fieldset>
+</div>
+<noscript><div class="field">
+<%= f.submit 'Next &#187;' %>
+</div></noscript>
+</div>
+<% end %>

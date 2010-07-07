@@ -1,0 +1,16 @@
+<h1>Create Survey</h1>
+
+<% form_for(@survey) do |f| %>
+<%= f.error_messages %>
+
+<div class="fields topMargin">
+<div class="field">
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<div class="field">
+<%= f.submit 'OK' %>
+</div>
+</div>
+
+<% end %>

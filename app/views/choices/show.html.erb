@@ -1,0 +1,30 @@
+<h1>Choice</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Content</td>
+<td><%= @choice.content %>
+</tr>
+<tr>
+<td>Score</td>
+<td><%= @choice.score %></td>
+</tr>
+<tr>
+<td>Next</td>
+<td><%= @choice.next %></td>
+</tr>
+<tr>
+<td>Question</td>
+<td><%= @choice.question.content %> (<%= link_to 'View', @choice.question %>)</td>
+</tr>
+<tr>
+<td>Created</td>
+<td><%= h time_ago_in_words @choice.created_at %> ago</td>
+</tr>
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Edit', edit_choice_path(@choice) %></li>
+</ul></div>

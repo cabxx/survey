@@ -1,0 +1,39 @@
+<h1>Submissions</h1>
+
+<table class="matrix topMargin">
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Score</th>
+<th>Response Time</th>
+<th>Created</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+
+<% @submissions.each_with_index do |submission, i| %>
+<tr>
+<td><%= i + 1 %></td>
+<td><%= link_to h(submission.name), submission %></td>
+<td><%= submission.score %></td>
+<td><%= response_min_str submission %></td>
+<td><%= h time_ago_in_words submission.created_at %> ago</td>
+<td class="actions">
+<div class="pageLinks"><ul>
+<li><%= link_to 'View', submission %></li>
+<li><%= link_to 'Edit', edit_submission_path(submission) %></li>
+<li><%= link_to 'Remove', submission, :confirm => 'Are you sure?', :method => :delete %></li>
+</ul></div>
+</td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+
+<div class="pageLinks topMargin"><ul>
+<li><%= link_to 'Take Survey', new_survey_submission_path(@survey) %></li>
+</ul></div>
+

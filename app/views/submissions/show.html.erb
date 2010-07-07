@@ -1,0 +1,54 @@
+<h1>Submission</h1>
+
+<table class="dataList topMargin">
+<tbody>
+<tr>
+<td>Survey</td>
+<td><%= link_to @submission.survey.name, @submission.survey %></td>
+</tr>
+<td>Name</td>
+<td><%= h @submission.name %></td>
+</tr>
+<tr>
+<td>Score</td>
+<td><%= @submission.score %></td>
+</tr>
+<tr>
+<td>Response Time</td>
+<td><%= response_min_str(@submission) %>
+</tr>
+</tbody>
+</table>
+
+<h2>Answers</h2>
+
+<table class="matrix">
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+
+<% @submission.answers.each_with_index do |answer, i| %>
+<tr>
+<td><%= i + 1 %></td>
+<td>
+<table class="subQA">
+<tr>
+<td><%= link_to 'Question', answer.question %>: </td>
+<td><%= answer.question.content %></td>
+</tr>
+<tr>
+<td><%= link_to 'Answer', answer %>: </td>
+<td><%= answer.choice.content %></td>
+</tr>
+</table>
+</td>
+<td><%= h answer.choice.score %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
